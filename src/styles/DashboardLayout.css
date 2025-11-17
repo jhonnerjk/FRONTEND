@@ -1,0 +1,62 @@
+.layout {
+  display: flex;
+  height: 100vh;
+}
+
+.menu {
+  width: 250px;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.menu h3 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  border-bottom: 2px solid #34495e;
+  padding-bottom: 10px;
+}
+
+.menu p {
+  margin: 0 0 20px 0;
+  font-size: 14px;
+  color: #bdc3c7;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.menu a:hover {
+  background-color: #34495e;
+}
+
+.menu button {
+  margin-top: auto;
+  padding: 10px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.menu button:hover {
+  background-color: #c0392b;
+}
+
+.content {
+  flex: 1;
+  padding: 30px;
+  background-color: #ecf0f1;
+  overflow-y: auto;
+}

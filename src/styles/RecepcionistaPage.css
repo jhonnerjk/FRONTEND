@@ -1,0 +1,163 @@
+.recepcionista-page {
+  padding: 20px;
+}
+
+.recepcionista-page h1 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.recepcionista-page p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.recepcionista-functions {
+  margin-top: 30px;
+}
+
+.recepcionista-functions h2 {
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.recepcionista-functions ul {
+  font-size: 18px;
+  line-height: 2;
+  list-style-position: inside;
+}
+
+.recepcionista-notice {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #e8f4f8;
+  border-radius: 8px;
+}
+
+.recepcionista-notice strong {
+  color: #17a2b8;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.tab {
+  padding: 10px 20px;
+  border: none;
+  background-color: #e9ecef;
+  cursor: pointer;
+  border-radius: 5px 5px 0 0;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.tab:hover {
+  background-color: #dee2e6;
+}
+
+.tab.active {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.tab-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 0 5px 5px 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Estilos para PatientManagement y AppointmentManagement */
+.patient-management,
+.appointment-management {
+  margin-top: 0;
+}
+
+.patient-form,
+.appointment-form {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.patient-form form,
+.appointment-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.patient-form input,
+.patient-form select,
+.appointment-form input,
+.appointment-form select,
+.appointment-form textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.patients-list table,
+.appointments-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.patients-list th,
+.patients-list td,
+.appointments-list th,
+.appointments-list td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.patients-list th,
+.appointments-list th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+.btn-cancel {
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.btn-cancel:hover {
+  background-color: #c82333;
+}
+
+.badge-programado {
+  background-color: #007bff;
+  color: white;
+}
+
+.badge-atendido {
+  background-color: #28a745;
+  color: white;
+}
+
+.badge-ausente {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.badge-cancelado {
+  background-color: #6c757d;
+  color: white;
+}

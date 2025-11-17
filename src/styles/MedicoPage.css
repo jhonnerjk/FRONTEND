@@ -1,0 +1,142 @@
+.medico-page {
+  padding: 20px;
+}
+
+.medico-page h1 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.medico-page p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.medico-functions {
+  margin-top: 30px;
+}
+
+.medico-functions h2 {
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.medico-functions ul {
+  font-size: 18px;
+  line-height: 2;
+  list-style-position: inside;
+}
+
+.medico-notice {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f0f8e8;
+  border-radius: 8px;
+}
+
+.medico-notice strong {
+  color: #28a745;
+}
+
+.appointments-section {
+  margin-top: 20px;
+}
+
+.appointments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.appointment-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.card-header {
+  background-color: #f8f9fa;
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.badge-programado {
+  background-color: #007bff;
+  color: white;
+}
+
+.badge-atendido {
+  background-color: #28a745;
+  color: white;
+}
+
+.badge-ausente {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.badge-cancelado {
+  background-color: #6c757d;
+  color: white;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-body h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.card-body p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.card-actions {
+  padding: 15px;
+  display: flex;
+  gap: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.btn-success {
+  flex: 1;
+  padding: 8px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+.btn-warning {
+  flex: 1;
+  padding: 8px;
+  background-color: #ffc107;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+}
