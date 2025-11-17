@@ -1,0 +1,39 @@
+/* Estilos para DocentePage - Centro de Innovación UDI */
+
+.docente-page {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.docente-page h1 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.docente-page p {
+  color: #7f8c8d;
+  margin-bottom: 30px;
+}
+
+.page-content {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .docente-page {
+    padding: 15px;
+  }
+}

@@ -17,24 +17,28 @@ function DashboardLayout() {
   return (
     <div className="layout">
       <nav className="menu">
-        <h3>Centro Médico</h3>
-        <p>Rol: {user.role}</p>
+        <h3>Centro de Innovación UDI</h3>
+        <p className="user-info">
+          {user.nombre || user.email}
+          <br />
+          <span className="role-badge">{user.role}</span>
+        </p>
 
-        <Link to="/dashboard">Inicio (Todos)</Link>
+        <Link to="/dashboard">📊 Inicio</Link>
         
         {user.role === 'admin' && (
-          <Link to="/admin">Gestionar Usuarios (Admin)</Link>
+          <Link to="/admin">👥 Gestionar Usuarios</Link>
         )}
         
-        {user.role === 'recepcionista' && (
-          <Link to="/recepcion">Gestionar Turnos (Recep.)</Link>
+        {(user.role === 'gestor' || user.role === 'admin') && (
+          <Link to="/gestor">🎯 Gestión de Recursos</Link>
         )}
         
-        {user.role === 'medico' && (
-          <Link to="/medico">Mis Turnos (Médico)</Link>
+        {user.role === 'docente' && (
+          <Link to="/docente">📅 Mis Reservas</Link>
         )}
         
-        <button onClick={handleLogout}>Cerrar Sesión</button>
+        <button onClick={handleLogout} className="logout-btn">🚪 Cerrar Sesión</button>
       </nav>
 
       <main className="content">

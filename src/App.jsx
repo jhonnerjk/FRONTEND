@@ -10,8 +10,8 @@ import DashboardHome from './pages/DashboardHome';
 
 // Lazy Loading para optimización
 const AdminPage = lazy(() => import('./pages/AdminPage'));
-const RecepcionistaPage = lazy(() => import('./pages/RecepcionistaPage'));
-const MedicoPage = lazy(() => import('./pages/MedicoPage'));
+const GestorPage = lazy(() => import('./pages/GestorPage'));
+const DocentePage = lazy(() => import('./pages/DocentePage'));
 
 function App() {
   return (
@@ -34,12 +34,12 @@ function App() {
             <Route path="/admin" element={<AdminPage />} />
           </Route>
 
-          <Route element={<ProtectedRoute allowedRoles={['recepcionista']} />}>
-            <Route path="/recepcion" element={<RecepcionistaPage />} />
+          <Route element={<ProtectedRoute allowedRoles={['gestor', 'admin']} />}>
+            <Route path="/gestor" element={<GestorPage />} />
           </Route>
 
-          <Route element={<ProtectedRoute allowedRoles={['medico']} />}>
-            <Route path="/medico" element={<MedicoPage />} />
+          <Route element={<ProtectedRoute allowedRoles={['docente']} />}>
+            <Route path="/docente" element={<DocentePage />} />
           </Route>
         
         </Route>
