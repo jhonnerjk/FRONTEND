@@ -11,7 +11,9 @@ export const AuthProvider = ({ children }) => {
         if (token) {
             try{
                 const decoded = jwtDecode(token);
-                setUser({ id: decoded.userId, role: decoded.role });
+                const roles = decoded.roles || (decoded.role ? [decoded.role] : ['docente']);
+                const primaryRole = roles.includes('admin') ? 'admin' : roles.includes('gestor') ? 'gestor' : roles[0];
+                setUser({ id: decoded.userId, role: primaryRole, roles: roles });
             } catch (error) {
                 console.error("Token invalido", error);
                 localStorage.removeItem('token');
@@ -23,7 +25,9 @@ export const AuthProvider = ({ children }) => {
     const login = (newToken) => {
         localStorage.setItem('token', newToken);
         const decoded = jwtDecode(newToken);
-        setUser({ id: decoded.userId, role: decoded.role });
+        const roles = decoded.roles || (decoded.role ? [decoded.role] : ['docente']);
+        const primaryRole = roles.includes('admin') ? 'admin' : roles.includes('gestor') ? 'gestor' : roles[0];
+        setUser({ id: decoded.userId, role: primaryRole, roles: roles });
         setToken(newToken);
     };
 

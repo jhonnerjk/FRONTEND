@@ -11,8 +11,8 @@ export const ProtectedRoute = ({ allowedRoles }) => {
     return <Navigate to="/login" replace />;
   }
 
-  if (allowedRoles && !allowedRoles.includes(user.role)) {
-    return <Navigate to="/no-autorizado" replace />; // O a un dashboard genérico
+  if (allowedRoles && !allowedRoles.some(r => user.roles?.includes(r))) {
+    return <Navigate to="/no-autorizado" replace />;
   }
 
   return <Outlet />;
