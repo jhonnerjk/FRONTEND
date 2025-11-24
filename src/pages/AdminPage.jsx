@@ -122,10 +122,15 @@ function AdminPage() {
               required
               minLength="6"
             />
-            <select name="role" value={formData.role} onChange={handleInputChange}>
-              <option value="admin">Administrador</option>
-              <option value="gestor">Gestor</option>
+            <select
+              name="role"
+              value={formData.role}
+              onChange={handleInputChange}
+              required
+            >
               <option value="docente">Docente</option>
+              <option value="gestor">Gestor</option>
+              <option value="admin">Admin</option>
             </select>
             <label>
               <input
@@ -148,7 +153,7 @@ function AdminPage() {
             <tr>
               <th>Nombre</th>
               <th>Email</th>
-              <th>Rol</th>
+              <th>Roles</th>
               <th>Estado</th>
               <th>Acciones</th>
             </tr>
@@ -159,14 +164,14 @@ function AdminPage() {
                 <td>{u.nombre}</td>
                 <td>{u.email}</td>
                 <td>
-                  <select 
-                    value={u.role} 
+                  <select
+                    value={u.role}
                     onChange={(e) => handleChangeRole(u._id, e.target.value)}
                     className="role-select"
                   >
-                    <option value="admin">admin</option>
-                    <option value="gestor">gestor</option>
-                    <option value="docente">docente</option>
+                    <option value="docente">Docente</option>
+                    <option value="gestor">Gestor</option>
+                    <option value="admin">Admin</option>
                   </select>
                 </td>
                 <td>

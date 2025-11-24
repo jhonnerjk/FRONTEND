@@ -161,3 +161,76 @@
   background-color: #28a745;
   color: white;
 }
+
+.roles-checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.roles-checkboxes > div {
+  display: flex;
+  gap: 15px;
+}
+
+.roles-checkboxes label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.roles-display {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.role-badge {
+  background-color: #007bff;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.roles-edit {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.badge-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.badge-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-sm {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.inactive-user {
+  opacity: 0.6;
+  background-color: #f8f9fa;
+}

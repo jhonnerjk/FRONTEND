@@ -22,26 +22,26 @@ function DashboardHome() {
       <h1>Centro de Innovación y Laboratorios UDI</h1>
       <h2>Bienvenido al Sistema de Gestión de Recursos</h2>
       <p className="user-greeting">{user?.nombre || user?.email}</p>
-      <p className="user-role">Rol{user?.roles?.length > 1 ? 'es' : ''}: <strong>{user?.roles?.map(r => r.toUpperCase()).join(', ') || user?.role?.toUpperCase()}</strong></p>
+      <p className="user-role">Rol: <strong>{user?.role?.toUpperCase()}</strong></p>
       
       <div className="dashboard-info">
         <div className="info-card">
           <h3>¿Qué puedes hacer?</h3>
-          {user?.roles?.includes('admin') && (
+          {user?.role === 'admin' && (
             <ul>
               <li>Gestionar usuarios del sistema</li>
               <li>Asignar roles y permisos</li>
               <li>Activar/Desactivar cuentas</li>
             </ul>
           )}
-          {user?.roles?.includes('gestor') && (
+          {user?.role === 'gestor' && (
             <ul>
               <li>Registrar y gestionar recursos (salas y equipos)</li>
               <li>Aprobar o rechazar reservas</li>
               <li>Registrar incidencias</li>
             </ul>
           )}
-          {user?.roles?.includes('docente') && (
+          {user?.role === 'docente' && (
             <ul>
               <li>Ver catálogo de recursos disponibles</li>
               <li>Crear solicitudes de reserva</li>
